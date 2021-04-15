@@ -1,0 +1,29 @@
+{
+    "books": [
+        {
+            "title": "Enciclopedia Omnia delle Creature Almeno Quasi Semisenzienti e dei Balbastai",
+            "subtitle": "ah boh!",
+            "sections": [
+                {
+                    "title": "leggimi",
+                    "file": "README",
+                    "date": "2021-04-15T19:08:00"
+                },
+                {
+                    "title": "sbrastiami",
+                    "file": "zebul"
+                },
+                {
+                    "title": "bulbiami",
+                    "file": "falouuu"
+                }
+            ]
+        },
+        {
+            "title": "Accademia della crustia"
+        },
+        {
+            "title": "Vocabolario dei dialetti frastici"
+        }
+    ]
+}
