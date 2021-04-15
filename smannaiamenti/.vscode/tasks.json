@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "smannaia",
+			"type": "shell",
+			"command": "flutter clean && flutter build web && cp CNAME build/web/CNAME",
+			"problemMatcher": [
+				"$dart-build_runner"
+			],
+			"isBackground": true
+		},
+		{
+			"label": "deploia",
+			"type": "shell",
+			"command": "git push origin `git subtree split --prefix smannaiamenti/build/web master`:gh-pages --force",
+		}
+	]
+}
