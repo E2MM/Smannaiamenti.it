@@ -21,3 +21,6 @@
 		}
 	]
 }
+
+//git subtree push --prefix smannaiamenti/build/web origin gh-pages
+//git push origin `git subtree split --prefix smannaiamenti/build/web master`:gh-pages --force

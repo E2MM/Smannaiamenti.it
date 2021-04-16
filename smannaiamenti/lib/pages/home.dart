@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/intl.dart';
 import 'package:smannaiamenti/models/library.dart';
 import 'package:smannaiamenti/pages/reader.dart';
 
@@ -52,25 +53,28 @@ class _HomePageState extends State<HomePage> {
       return Card(
         margin: EdgeInsets.fromLTRB(4, 4, 32, 4),
         child: ListTile(
-          isThreeLine: true,
           leading: Icon(Icons.menu_book_rounded),
           title: Text(book.title),
           subtitle: Text(
             book.subtitle,
             maxLines: 2,
           ),
-          onTap: () => setState(() => clickedBook = book),
+          onTap: () =>
+              setState(() => clickedBook = clickedBook == book ? null : book),
         ),
       );
     }
 
     Widget _buildSectionButton(Book book, int index) {
+      Section section = book.sections[index];
       return Card(
         margin: EdgeInsets.fromLTRB(56, 4, 4, 4),
         child: ListTile(
           leading: Icon(Icons.radio_button_checked_outlined),
-          title: Text(
-            book.sections[index].title,
+          title: Text(section.title),
+          subtitle: Text(
+            DateFormat.yMMMd().format(section.date),
+            maxLines: 1,
           ),
           onTap: () => _loadMd(index),
         ),
@@ -113,7 +117,15 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Smannaiamenti.it"),
+        title: Row(
+          children: <Widget>[
+            Image.asset(
+              "web/icons/Icon-200.png",
+              height: 100,
+            ),
+            Text("Smannaiamenti.it"),
+          ],
+        ),
       ),
       body: SafeArea(
         child: Row(

@@ -51,12 +51,14 @@ class Book {
 class Section {
   String title = "";
   String file = "";
+  DateTime date = DateTime(2021, 04, 15, 21);
 
   Section({this.title = "", this.file = ""});
 
   Section.fromJson(Map<String, dynamic> json) {
     title = json['title'] ?? "";
     file = json['file'] ?? "";
+    date = DateTime.tryParse(json['date'] ?? "") ?? DateTime.now();
   }
 
   Map<String, dynamic> toJson() {
