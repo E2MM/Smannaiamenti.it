@@ -1,34 +1,28 @@
 {
     "books": [
         {
-            "title": "Enciclopedia Omnia delle Creature Almeno Quasi Semisenzienti e dei Balbastai",
-            "subtitle": "ah boh!",
+            "title": "enciclopedia omnia delle creature almeno quasi semisenzienti e dei balbastai",
+            "subtitle": "esauriente ma non esaustiva",
             "sections": [
                 {
-                    "title": "Porcide",
+                    "title": "porcide",
                     "file": "porcide",
                     "date": "2021-04-16T14:05:00"
-                },
-                {
-                    "title": "leggimi",
-                    "file": "README",
-                    "date": "2021-04-15T19:08:00"
-                },
-                {
-                    "title": "sbrastiami",
-                    "file": "zebul"
-                },
-                {
-                    "title": "bulbiami",
-                    "file": "falouuu"
                 }
             ]
         },
         {
-            "title": "Accademia della crustia"
+            "title": "accademia della crustia"
         },
         {
-            "title": "Vocabolario dei dialetti frastici"
+            "title": "vocabolario dei dialetti frastici",
+            "sections": [
+                {
+                    "title": "rostro",
+                    "file": "rostro",
+                    "date": "2021-04-19T14:00:00"
+                }
+            ]
         }
     ]
 }
