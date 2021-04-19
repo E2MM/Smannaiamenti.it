@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
+import 'package:smannaiamenti/config.dart';
 import 'package:smannaiamenti/models/library.dart';
 import 'package:smannaiamenti/pages/reader.dart';
 
@@ -45,8 +46,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-    var width = size.width;
+    var mediaQuery = MediaQuery.of(context);
+    var width = mediaQuery.size.width;
 
     Widget _buildBookButton(int index) {
       Book book = library.books[index];
@@ -115,15 +116,46 @@ class _HomePageState extends State<HomePage> {
         return _buildBooksWithoutSections();
     }
 
+    Widget _buildLogo() {
+      return Stack(
+        children: [
+          Container(
+            width: 104.0,
+            height: 98.0,
+            decoration: new BoxDecoration(
+              color: Colors.white,
+              shape: BoxShape.circle,
+            ),
+          ),
+          Image.asset(
+            "web/icons/Icon-200.png",
+            height: 98,
+          ),
+        ],
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Row(
           children: <Widget>[
-            Image.asset(
-              "web/icons/Icon-200.png",
-              height: 100,
+            _buildLogo(),
+            SizedBox(width: 8),
+            Text(
+              "smannaiamenti.it",
+              overflow: TextOverflow.fade,
             ),
-            Text("Smannaiamenti.it"),
+            Spacer(),
+            Switch(
+              value: currentTheme.isDarkMode(
+                platformBrightness: mediaQuery.platformBrightness,
+              ),
+              onChanged: (value) {
+                setState(() {
+                  currentTheme.setDarkMode(value);
+                });
+              },
+            ),
           ],
         ),
       ),

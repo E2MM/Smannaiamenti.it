@@ -22,7 +22,7 @@ class _ReaderPageState extends State<ReaderPage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Smannaiamenti.it"),
+        title: Text("smannaiamenti.it"),
       ),
       body: SafeArea(
         child: Container(
