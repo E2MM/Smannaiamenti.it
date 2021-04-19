@@ -24,15 +24,15 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _loadLibrary() async {
-    var s = await rootBundle.loadString("md/content.json");
+    var s = await rootBundle.loadString("wiki/content.json");
     setState(() {
       library = Library.fromJson(jsonDecode(s));
     });
   }
 
   void _loadMd(int index) async {
-    var file = library.books.first.sections[index].file;
-    var markdownContent = await rootBundle.loadString("md/$file.md");
+    var file = clickedBook!.sections[index].file;
+    var markdownContent = await rootBundle.loadString("wiki/$file.md");
 
     Navigator.push(
       context,
