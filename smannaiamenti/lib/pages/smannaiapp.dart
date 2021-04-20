@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:smannaiamenti/components/mannaia.dart';
 import 'package:smannaiamenti/config.dart';
 import 'home.dart';
 
-class SmannaiamentiApp extends StatefulWidget {
+class Smannaiapp extends StatefulWidget {
   @override
-  _SmannaiamentiAppState createState() => _SmannaiamentiAppState();
+  _SmannaiappState createState() => _SmannaiappState();
 }
 
-class _SmannaiamentiAppState extends State<SmannaiamentiApp> {
+class _SmannaiappState extends State<Smannaiapp> {
   ThemeMode _themeMode = ThemeMode.system;
 
   @override

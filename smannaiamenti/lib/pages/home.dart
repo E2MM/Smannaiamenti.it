@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
+import 'package:smannaiamenti/components/smannaiappbar.dart';
 import 'package:smannaiamenti/config.dart';
 import 'package:smannaiamenti/models/library.dart';
 import 'package:smannaiamenti/pages/reader.dart';
@@ -14,7 +15,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Library library = Library();
   Book? clickedBook;
 
   @override
@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  void _loadMd(int index) async {
+  void _loadSection(int index) async {
     var file = clickedBook!.sections[index].file;
     var markdownContent = await rootBundle.loadString("wiki/$file.md");
 
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
             DateFormat.yMMMd().format(section.date),
             maxLines: 1,
           ),
-          onTap: () => _loadMd(index),
+          onTap: () => _loadSection(index),
         ),
       );
     }
@@ -116,49 +116,8 @@ class _HomePageState extends State<HomePage> {
         return _buildBooksWithoutSections();
     }
 
-    Widget _buildLogo() {
-      return Stack(
-        children: [
-          Container(
-            width: 104.0,
-            height: 98.0,
-            decoration: new BoxDecoration(
-              color: Colors.white,
-              shape: BoxShape.circle,
-            ),
-          ),
-          Image.asset(
-            "web/icons/Icon-200.png",
-            height: 98,
-          ),
-        ],
-      );
-    }
-
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: <Widget>[
-            _buildLogo(),
-            SizedBox(width: 8),
-            Text(
-              "smannaiamenti.it",
-              overflow: TextOverflow.fade,
-            ),
-            Spacer(),
-            Switch(
-              value: currentTheme.isDarkMode(
-                platformBrightness: mediaQuery.platformBrightness,
-              ),
-              onChanged: (value) {
-                setState(() {
-                  currentTheme.setDarkMode(value);
-                });
-              },
-            ),
-          ],
-        ),
-      ),
+      appBar: SmannaiappBar(isHomePage: true),
       body: SafeArea(
         child: Row(
           children: <Widget>[
