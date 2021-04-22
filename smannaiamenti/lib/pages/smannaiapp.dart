@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:smannaiamenti/components/mannaia.dart';
 import 'package:smannaiamenti/config.dart';
 import 'home.dart';
 

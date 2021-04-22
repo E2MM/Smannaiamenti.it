@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter/services.dart';
-import 'package:smannaiamenti/components/mannaia.dart';
 import 'package:smannaiamenti/components/smannaiappbar.dart';
 
 class ReaderPage extends StatefulWidget {
@@ -33,24 +32,13 @@ class _ReaderPageState extends State<ReaderPage> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-    var width = size.width;
-
-    return Mannaia(
-      color: Colors.red[800],
-      size: 10,
-      trail: true,
-      trailSize: 24,
-      trailColor: Colors.red[900]!.withOpacity(0.5),
-      trailDelay: Duration(milliseconds: 350),
-      child: Scaffold(
-        appBar: SmannaiappBar(),
-        body: SafeArea(
-          child: Container(
-            child: Markdown(
-              data: markdownContent,
-              onTapLink: _goToLink,
-            ),
+    return Scaffold(
+      appBar: SmannaiappBar(),
+      body: SafeArea(
+        child: Container(
+          child: Markdown(
+            data: markdownContent,
+            onTapLink: _goToLink,
           ),
         ),
       ),
