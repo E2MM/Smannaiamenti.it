@@ -73,10 +73,10 @@ class _HomePageState extends State<HomePage> {
         child: ListTile(
           leading: Icon(Icons.radio_button_checked_outlined),
           title: Text(section.title),
-          subtitle: Text(
-            DateFormat.yMMMd().format(section.date),
-            maxLines: 1,
-          ),
+          // subtitle: Text(
+          //   DateFormat.yMMMd().format(section.date),
+          //   maxLines: 1,
+          // ),
           onTap: () => _loadSection(index),
         ),
       );
