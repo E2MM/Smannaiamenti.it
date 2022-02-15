@@ -4,7 +4,7 @@
 		{
 			"label": "smannaia",
 			"type": "shell",
-			"command": "flutter clean && flutter build web && cp CNAME build/web/CNAME",
+			"command": "export PATH=\"$PATH\":\"$HOME/.pub-cache/bin\" && peanut",
 			"problemMatcher": [
 				"$dart-build_runner"
 			],
@@ -22,5 +22,6 @@
 	]
 }
 
+//"flutter clean && flutter build web && cp CNAME build/web/CNAME"
 //git subtree push --prefix smannaiamenti/build/web origin gh-pages
 //git push origin `git subtree split --prefix smannaiamenti/build/web master`:gh-pages --force
