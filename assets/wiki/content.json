@@ -68,6 +68,11 @@
             "subtitle": "nessun personaggio è sopravvissuto al racconto",
             "sections": [
                 {
+                    "title": "la breve storia del* bambin* e del* gatt*",
+                    "file": "bambin*",
+                    "date": "2022-02-15T13:30:00"
+                },
+                {
                     "title": "la mucca, l'orco mummia e il cinghiale da traino",
                     "file": "mucca_orcomummia_cinghiale",
                     "date": "2021-05-05T00:05:00"
