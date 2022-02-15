@@ -3,7 +3,6 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:intl/intl.dart';
 import 'package:smannaiamenti/components/smannaiappbar.dart';
 import 'package:smannaiamenti/config.dart';
 import 'package:smannaiamenti/models/library.dart';
