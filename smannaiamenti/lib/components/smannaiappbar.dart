@@ -67,6 +67,7 @@ class _SmannaiappBarState extends State<SmannaiappBar> {
                     Navigator.push(
                       context,
                       PageRouteBuilder(
+                        settings: RouteSettings(name: "/"),
                         pageBuilder: (context, animation1, animation2) =>
                             HomePage(),
                         transitionDuration: Duration(seconds: 0),

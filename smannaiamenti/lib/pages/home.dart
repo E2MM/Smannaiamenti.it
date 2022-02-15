@@ -31,13 +31,12 @@ class _HomePageState extends State<HomePage> {
 
   void _loadSection(int index) async {
     var file = clickedBook!.sections[index].file;
-    var markdownContent = await rootBundle.loadString("wiki/$file.md");
 
     Navigator.push(
       context,
       PageRouteBuilder(
-        pageBuilder: (context, animation1, animation2) =>
-            ReaderPage(markdownContent),
+        settings: RouteSettings(name: "/$file"),
+        pageBuilder: (context, animation1, animation2) => ReaderPage(file),
         transitionDuration: Duration(seconds: 0),
       ),
     );
