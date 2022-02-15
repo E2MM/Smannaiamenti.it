@@ -14,9 +14,6 @@
 			"label": "deploia",
 			"type": "shell",
 			"command": "git push origin --set-upstream gh-pages",
-			"problemMatcher": [
-				"$dart-build_runner"
-			],
 			"isBackground": true
 		}
 	]
