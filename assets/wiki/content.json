@@ -52,6 +52,11 @@
             "subtitle": "in collaborazione con l'accademia della crustia",
             "sections": [
                 {
+                    "title": "defrastiare",
+                    "file": "defrastiare",
+                    "date": "2022-02-16T18:00:00"
+                },
+                {
                     "title": "porciclico",
                     "file": "porciclico",
                     "date": "2021-05-04T21:00:00"

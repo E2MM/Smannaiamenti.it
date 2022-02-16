@@ -4,17 +4,17 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "77c69ffeb93c0194703b1351dc8e5304",
-"index.html": "3a5cdbe9c938868927f7a3376854f452",
-"/": "3a5cdbe9c938868927f7a3376854f452",
+"index.html": "f32ae0280e645b8619378faf8801f214",
+"/": "f32ae0280e645b8619378faf8801f214",
 "CNAME": "479540a8a9c9c49891e813d6ebfc256c",
 "main.dart.js": "e028dbbba138c835ab5c25304dc6a339",
 "favicon.png": "8702a79f97a14edb228f5db6fb4f1e6f",
 "icons/Icon-200.png": "8702a79f97a14edb228f5db6fb4f1e6f",
-"manifest.json": "8cb874c5cccfd3c826e1c86e05cf9ad2",
+"manifest.json": "906f2622021faaf37584df2895a5494f",
 "assets/web/icons/Icon-200.png": "8702a79f97a14edb228f5db6fb4f1e6f",
-"assets/AssetManifest.json": "22294296a20783a38819df5c1e36eeb2",
-"assets/wiki/content.json": "f1116c1deb0a50b6da3c782b34ee6c77",
-"assets/wiki/bambin*.md": "3f4c90e047e53dc81126093aab3ab4cc",
+"assets/AssetManifest.json": "14e849c07ef931034676c896a56c4ca5",
+"assets/wiki/content.json": "6091a4fad016537363129de5b098023e",
+"assets/wiki/bambin*.md": "882cf7e3d0264a0a08d58e2a18523a90",
 "assets/wiki/porcisturo.md": "bec18232f7e3c5f604b0c442e7129d0e",
 "assets/wiki/sistema_porcoidale.md": "552ea7e7e4e87fee6a840ed7f3c88f70",
 "assets/wiki/content.md": "cebc4a5f4c16c8400af406397dd75425",
@@ -22,6 +22,7 @@ const RESOURCES = {
 "assets/wiki/procupto.md": "eb9919c55731997387323857632de07b",
 "assets/wiki/procuptide.md": "396a60e170eea740e19ece2d6748c08d",
 "assets/wiki/rostro.md": "1b71de4ef230e75451955516bdf45db5",
+"assets/wiki/defrastiare.md": "668d86ad5fe1c9b8c9f8580b5d6a89d7",
 "assets/wiki/Home.md": "acef0c3d386c6b8583cee1b157a004d9",
 "assets/wiki/porcide.md": "bbf25a74c39c6d00e1c66e0a9f31faf6",
 "assets/wiki/ghktkuktk.md": "45fac8f707b883d15bc74b93fd34875b",
@@ -31,9 +32,8 @@ const RESOURCES = {
 "assets/wiki/gerbult.md": "ca7de11888f8f6665155816ff5296edd",
 "assets/wiki/mucca_orcomummia_cinghiale.md": "45fe169984ab331241d1abae07b38b21",
 "assets/wiki/porcistide.md": "7521fb3a4b6e14564d1433e4869f1876",
-"assets/NOTICES": "634248c8997e59ef1901472099ef1075",
-"assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
+"assets/NOTICES": "fc9737c6721d9dc1f97f86d479bc86c9",
+"assets/FontManifest.json": "7b2a36307916a9721811788013e65289",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1"
 };
 
