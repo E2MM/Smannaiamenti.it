@@ -21,7 +21,10 @@ class _ReaderPageState extends State<ReaderPage> {
 
   @override
   initState() {
-    markdownContentFuture = rootBundle.loadString("wiki/$page.md");
+    markdownContentFuture = rootBundle.loadString(
+      "wiki/$page.md",
+      cache: false,
+    );
     markdownContentFuture.then((value) {
       markdownContent = value;
       this.setState(() {});
